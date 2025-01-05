@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 import LandingPage from './routes/LandingPage';
 import Login from './routes/Login';
 import Dashboard from './routes/Dashboard';
+import ProjectInput from './routes/ProjectInput';
 import Admin from './routes/Admin';
 import PrivateRoute from './routes/PrivateRoute';
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/project-input" element={<ProjectInput />} />
           <Route
             path="admin"
             element={

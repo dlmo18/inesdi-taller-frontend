@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import WaveLanding from '../background/WaveLanding';
 import { themes } from '../../styles/ColorStyles';
-import { H1 } from '../../styles/TextStyles';
+import { H1, H2 } from '../../styles/TextStyles';
 import Lottie from 'lottie-react';
 import animationData from './landing.json';
 
@@ -15,6 +15,7 @@ const LandingPage = () => {
       <WaveLanding />
       <ContentWrapper>
         <Title>{t('landing.title')}</Title>
+        <SubTitle>{t('landing.subtitle')}</SubTitle>
       </ContentWrapper>
       <LottieWrapper>
         <Lottie animationData={animationData} loop={true} />
@@ -55,6 +56,21 @@ const Title = styled(H1)`
 
   @media (max-width: 830px) {
     margin-top: 20px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 60px;
+  }
+`;
+
+const SubTitle = styled(H2)`
+  margin-top: 10px;
+  font-size: 50px;
+  color: ${themes.dark.text1};
+  text-align: center;
+
+  @media (max-width: 830px) {
+    margin-top: 5px;
   }
 
   @media (max-width: 450px) {

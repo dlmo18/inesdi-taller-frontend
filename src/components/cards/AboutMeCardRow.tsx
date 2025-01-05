@@ -2,15 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import { themes } from '../../styles/ColorStyles';
 import { MediumText } from '../../styles/TextStyles';
+import { Link } from 'react-router-dom';
 
 interface AboutMeCardRowProps {
   title: string;
   value: string | number;
+  isLink: boolean;
 }
 
 const AboutMeCardRow = (props: AboutMeCardRowProps) => {
-  const formatDate = (value: string | number): string => {
-    if (typeof value === 'number') {
+  const formatValue = (value: string | number): string => {
+    if (props.isLink) {
+      return <Link 
+        to={value} 
+        target="_blank"
+        key="link-input">
+          {value}
+      </Link>;
+    }
+    else if (typeof value === 'number') {
       const date = new Date(value);
       return date.toLocaleDateString();
     } else {
@@ -22,7 +32,7 @@ const AboutMeCardRow = (props: AboutMeCardRowProps) => {
     <InfoDetailBox>
       <InfoKey>{props.title}</InfoKey>
       <InfoValueWrapper>
-        <InfoValue>{formatDate(props.value)}</InfoValue>
+        <InfoValue>{formatValue(props.value)}</InfoValue>
       </InfoValueWrapper>
     </InfoDetailBox>
   );

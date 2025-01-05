@@ -4,7 +4,7 @@ import { Project } from '../model/project';
 export const mockLogin = (userName: string, password: string) =>
   new Promise<TokenResponse>(function (resolve, rejected) {
     setTimeout(() => {
-      if (userName === 'user@threepoints.com' && password === 'patata') {
+      if (userName === 'admin@davidmolinaojeda.com' && password === 'Bankai#2025') {
         resolve(
           JSON.parse(
             `{"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODg0YmJiM2Q0YTRkNDk1ZDYyNGJhYyIsImVtYWlsIjoibHVjYXNmZXJuYW5kZXphcmFnb25AZ21haWwuY29tIiwiaWF0IjoxNjM2MzIyMzA3LCJleHAiOjE2MzYzMjU5MDd9.yxy7uKWXJx5rY8znRBTg5182llyH8Rs9R8C6_SM4LIg" }`
@@ -42,12 +42,12 @@ export const mockAboutme = () =>
       resolve(
         JSON.parse(
           `{
-            "id":"12389asdfasf8",
-            "name":"Lucas Fernández Aragón",
-            "birthday":765817712000,
-            "nationality":"Spain",
-            "job":"Red Hat",
-            "github":"https://github.com/lucferbux"
+            "id":"072511DLMO",
+            "name":"David L. Molina Ojeda",
+            "birthday":437034180000,
+            "nationality":"Perú",
+            "job":"Telefónica del Perú",
+            "github":"https://github.com/dlmo18"
             }`
         )
       );
@@ -62,78 +62,82 @@ export const mockProjects = () =>
           `[
                 {
                 "id":"12349as8df90",
-                "title":"React",
-                "description":"React es el Framework web basado en componentes de Facebook. Cuenta con una curva de aprendizaje corta y mucha flexibilidad",
-                "version":"17.0.1",
-                "link":"https://reactjs.org/docs/hello-world.html",
-                "tag":"JavaScript, Typescript, React",
+                "title":"Tarjeta Cencosud",
+                "description":"Desarrollado en Wordpress con un gestor de contenidos",
+                "version":"2.25",
+                "link":"https://www.tarjetacencosud.pe/",
+                "tag":"Wordpress, Portal Web",
                 "timestamp":"765817712000"
                 },
                 {
-                "id":"789asdfas89",
-                "title":"Vite",
-                "description":"Toolchain para la creación de proyectos basados en React, contiene lo báisco para crear proyectos basados en single-page apps",
-                "version":"4.0.3",
-                "link":"https://vitejs.dev",
-                "tag":"Toolchain, React, Bootstraping",
-                "timestamp":"765817712001"
+                "id":"12349as8df90",
+                "title":"Dia D Juegos Perú",
+                "description":"Tienda en linea para compra de juegos de mesa en Perú",
+                "version":"2.24",
+                "link":"https://diadejuegos.com/",
+                "tag":"Prestashop, Ecommerce",
+                "timestamp":"765817712000"
                 },
                 {
-                "id":"56765asdfasdf8",
-                "title":"Styled components",
-                "description":"Librería que permite usar template literals y css para crear estilos en componente con JavaScript",
-                "version":"5.2.1",
-                "link":"https://styled-components.com/docs",
-                "tag":"CSS, JavaScript, Babel",
-                "timestamp":"765817712002"
+                "id":"12349as8df90",
+                "title":"Weleda",
+                "description":"Tienda en linea para compra de productos de cuidado personal",
+                "version":"6.6",
+                "link":"http://weleda.com.pe/",
+                "tag":"Woocomerce, Ecommerce",
+                "timestamp":"765817712000"
                 },
                 {
-                "id":"56765asdfasdf8",
-                "title":"React i18next",
-                "description":"Internacionalización de nuestro proyecto en React.",
-                "version":"19.9.2",
-                "link":"https://react.i18next.com",
-                "tag":"JavaScript, i18n, React",
-                "timestamp":"765817712003"
+                "id":"12349as8df90",
+                "title":"CuboRojo",
+                "description":"Portal web de una agencia digital",
+                "version":"1.24",
+                "link":"https://cuborojo.pe/",
+                "tag":"Wordpress, Portal Web",
+                "timestamp":"765817712000"
+                },               
+                {
+                "id":"12349as8df90",
+                "title":"Zona ARIS",
+                "description":"Intranet de empleados con un REST API para servicios en portla web y móvil",
+                "version":"4.24",
+                "link":"https://zona.aris.com.pe/",
+                "tag":"Angular, Yii",
+                "timestamp":"765817712000"
                 },
                 {
-                "id":"25634iuoasdf8",
-                "title":"React Lottie",
-                "description":"Animaciones en alta calidad que cuentan con distintos tipos de reproducción.",
-                "version":"1.2.3",
-                "link":"https://airbnb.design/lottie/",
-                "tag":"Animation, React, Aribnb",
-                "timestamp":"765817712004"
-                },
-                {
-                "id":"7890asdf890",
-                "title":"React Router",
-                "description":"Navegación entre páginas dentro de nuestra web app.",
-                "version":"5.2.0",
-                "link":"https://reactrouter.com/web/guides/quick-start",
-                "tag":"Navigation, routing",
-                "timestamp":"765817712005"
-                },
-                {
-                "id":"7890asdf890",
-                "title":"Swagger",
-                "description":"Herramienta para creación de especificaciones OpenAPI",
-                "version":"3.0,2",
-                "link":"https://swagger.io",
-                "tag":"API, OpenAPI",
-                "timestamp":"765817712006"
-                },
-                {
-                "id":"7890asdf890",
-                "title":"Figma",
-                "description":"Herramienta de diseño vectorial y prototipado",
-                "version":"-",
-                "link":"https://www.figma.com/proto/3e43h8TrzwpjfKwXvFxZoP/Taller?page-id=144%3A51&node-id=308%3A1187&viewport=254%2C48%2C0.12&scaling=min-zoom&starting-point-node-id=147%3A3",
-                "tag":"Vector, UX, UI",
-                "timestamp":"765817712007"
-                }
+                "id":"12349as8df90",
+                "title":"Plin",
+                "description":"Portal publico que tambien cuenta con un REST API para dar sooporte a campañas y juegos",
+                "version":"2.24",
+                "link":"https://plin.com.pe/",
+                "tag":"Wordpress, Rest API",
+                "timestamp":"765817712000"
+                }                
             ]`
         )
       );
     }, 500);
   });
+
+  export const mockProjectInput = ( data : any = null ) =>
+    new Promise<Project[]>(function (resolve) {
+      setTimeout(() => {
+
+        let now= Date.now()
+        resolve(
+          [
+            {
+            "_id"         : 'qwerty' + now,
+            "title"       : data?.title,
+            "description" : data?.description,
+            "version"     : data?.version,
+            "link"        : data?.link,
+            "tags"         : data?.tags,
+            "timestamp"   : now
+            } 
+          ]
+        )
+      }, 500);
+  });
+  

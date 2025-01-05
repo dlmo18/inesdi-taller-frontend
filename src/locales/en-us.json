@@ -1,6 +1,6 @@
 {
     "meta": {
-        "title": "Portfolio",
+        "title": "David Molina's Portfolio",
         "description": "Personal Portfolio Webpage"
     },
     "app": {
@@ -22,6 +22,18 @@
         "password_placeholder": "password",
         "button_login": "Log in",
         "login_title": "Login Panel"
+    },
+    "project_input": {
+        "err_input": "Invalid proyect",
+        "success_input": "Projecto added successfully",
+        "title_placeholder": "Title",
+        "description_placeholder": "Description",
+        "link_placeholder": "Link",
+        "tags_placeholder": "Tags",
+        "version_placeholder": "Version",
+        "button_login": "Add",
+        "button_delete": "Eliminar",
+        "login_title": "Add Project"
     },
     "admin": {
         "err_invalid_form": "Inputs must not be null",
