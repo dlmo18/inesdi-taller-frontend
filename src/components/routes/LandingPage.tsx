@@ -51,7 +51,7 @@ const ContentWrapper = styled.div`
 const Title = styled(H1)`
   margin-top: 80px;
   font-size: 70px;
-  color: ${themes.dark.text1};
+  color: ${themes.custom.text1};
   text-align: center;
 
   @media (max-width: 830px) {
@@ -66,7 +66,7 @@ const Title = styled(H1)`
 const SubTitle = styled(H2)`
   margin-top: 10px;
   font-size: 50px;
-  color: ${themes.dark.text1};
+  color: ${themes.custom.text1};
   text-align: center;
 
   @media (max-width: 830px) {

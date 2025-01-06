@@ -25,7 +25,7 @@ const LoaderWrapper = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: ${themes.light.loadingScreen};
+  background-color: ${themes.custom.loadingScreen};
   z-index: 100;
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@ const LoaderWrapper = styled.div`
 const LoaderCard = styled.div`
   font-size: 24px;
   text-align: center;
-  color: ${themes.dark.text1};
+  color: ${themes.custom.text1};
 `;
 
 const LoaderImg = styled.img`

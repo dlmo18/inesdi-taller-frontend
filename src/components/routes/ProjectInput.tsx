@@ -159,7 +159,7 @@ const ProjectInput = () => {
 
 
 const WrapperSuccess = styled.div`
-  ${themes.dark.modal}
+  ${themes.custom.modal}
   color: green;
   padding: 1rem;
 `;
@@ -203,14 +203,14 @@ const ContentWrapper = styled.div`
 const FormTitle = styled(H1)`
   text-align: center;
   @media (prefers-color-scheme: dark) {
-    color: ${themes.dark.text1};
+    color: ${themes.custom.text1};
   }
 `;
 
 const FormPanel = styled.form`
   padding: 20px 40px;
   width: 400px;
-  ${themes.light.card};
+  ${themes.custom.card};
   border-radius: 8px;
 
   display: grid;
@@ -218,7 +218,7 @@ const FormPanel = styled.form`
   grid-template-rows: auto;
 
   @media (prefers-color-scheme: dark) {
-    ${themes.dark.card};
+    ${themes.custom.card};
   }
 
   @media (max-width: 500px) {
@@ -229,7 +229,7 @@ const FormPanel = styled.form`
 `;
 
 const ErrorDescription = styled(Caption)`
-  color: ${themes.light.warning};
+  color: ${themes.custom.warning};
 `;
 
 const FormInput = styled.input`
@@ -237,13 +237,13 @@ const FormInput = styled.input`
   border-radius: 3px;
   width: 100%;
   height: 36px;
-  color: ${themes.light.text1};
-  background-color: ${themes.light.backgroundForm};
+  color: ${themes.custom.text1};
+  background-color: ${themes.custom.backgroundForm};
   padding-left: 8px;
 
   @media (prefers-color-scheme: dark) {
-    color: ${themes.dark.text1};
-    background-color: ${themes.dark.backgroundForm};
+    color: ${themes.custom.text1};
+    background-color: ${themes.custom.backgroundForm};
   }
 `;
 
@@ -251,22 +251,22 @@ const ButtonForm = styled.input`
   height: 36px;
   border-radius: 4px;
   border: none;
-  background-color: ${themes.light.secondary};
-  color: ${themes.dark.text1};
+  background-color: ${themes.custom.secondary};
+  color: ${themes.custom.text1};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${themes.dark.secondary};
+    background-color: ${themes.custom.secondary};
   }
 `;
 const SubmitForm = styled.input`
   height: 36px;
   border-radius: 4px;
   border: none;
-  background-color: ${themes.light.primary};
-  color: ${themes.dark.text1};
+  background-color: ${themes.custom.primary};
+  color: ${themes.custom.text1};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${themes.dark.primary};
+    background-color: ${themes.custom.primary};
   }
 `;
 

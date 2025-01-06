@@ -49,19 +49,19 @@ const InfoValueWrapper = styled.div``;
 
 const InfoKey = styled(MediumText)`
   font-weight: bold;
-  color: ${themes.light.text1};
+  color: ${themes.custom.text1};
 
   @media (prefers-color-scheme: dark) {
-    color: ${themes.dark.text1};
+    color: ${themes.custom.text1};
   }
 `;
 
 const InfoValue = styled(MediumText)`
-  color: ${themes.light.text1};
+  color: ${themes.custom.text1};
   margin-bottom: 8px;
 
   @media (prefers-color-scheme: dark) {
-    color: ${themes.dark.text1};
+    color: ${themes.custom.text1};
   }
 `;
 

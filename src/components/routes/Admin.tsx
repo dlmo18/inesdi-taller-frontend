@@ -42,7 +42,7 @@ const ContentWrapper = styled.div`
 const Title = styled(H1)`
   margin-top: 80px;
   font-size: 70px;
-  color: ${themes.dark.text1};
+  color: ${themes.custom.text1};
   text-align: center;
 
   @media (max-width: 830px) {
@@ -57,7 +57,7 @@ const Title = styled(H1)`
 const ButtonLink = styled.div`
   font-size: 1.2rem;
   border-radius: 1rem;
-  color: ${themes.light};
+  color: ${themes.custom};
   text-align: center;
   max-width: 300px;
   margin: 80px auto 0;

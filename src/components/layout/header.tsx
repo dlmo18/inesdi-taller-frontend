@@ -54,10 +54,10 @@ const Wrapper = styled.div`
   margin: 0px auto;
   padding: 30px 30px;
   z-index: 3;
-  background-color: ${themes.light.primary};
+  background-color: ${themes.custom.primary};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${themes.dark.primary};
+    background-color: ${themes.custom.primary};
   }
 `;
 interface MenuWrapperProps {
@@ -65,7 +65,7 @@ interface MenuWrapperProps {
 }
 
 const LinkButton = styled.p`
-  color: ${themes.dark.text1};
+  color: ${themes.custom.text1};
 `;
 
 const MenuWrapper = styled.div<MenuWrapperProps>`

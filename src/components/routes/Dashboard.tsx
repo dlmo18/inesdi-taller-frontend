@@ -125,7 +125,7 @@ const ProjectWrapper = styled.div`
 const ErrorMsg = styled(MediumText)`
   text-align: center;
   @media (prefers-color-scheme: dark) {
-    color: ${themes.dark.text1};
+    color: ${themes.custom.text1};
   }
 `;
 
