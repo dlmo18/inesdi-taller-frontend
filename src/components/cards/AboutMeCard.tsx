@@ -36,7 +36,7 @@ const AboutMeCard = (props: AboutMeCardProps) => {
             <AboutMeCardRow title={t('aboutMeCard.occupation')} value={props.aboutMe.job} />
           )}
           {props.aboutMe.github && (
-            <AboutMeCardRow title={t('aboutMeCard.github')} value={props.aboutMe.github} />
+            <AboutMeCardRow title={t('aboutMeCard.github')} value={props.aboutMe.github} isLink={true} />
           )}
         </InfoSection>
       </InfoWrapper>
@@ -45,7 +45,7 @@ const AboutMeCard = (props: AboutMeCardProps) => {
 };
 
 const Wrapper = styled.div`
-  ${themes.light.card};
+  ${themes.custom.card};
   padding: 20px;
   position: relative;
   margin: 20px;
@@ -56,8 +56,12 @@ const Wrapper = styled.div`
   row-gap: 30px;
   min-width: 300px;
 
+  a {
+    color: ${themes.custom.secondary};
+  }
+
   @media (prefers-color-scheme: dark) {
-    ${themes.dark.card};
+    ${themes.custom.card};
   }
 
   @media (max-width: 1080px) {

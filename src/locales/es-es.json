@@ -1,13 +1,14 @@
 {
     "meta": {
-        "title": "Portfolio",
+        "title": "Portafolio de David Molina",
         "description": "Personal Portfolio Webpage"
     },
     "app": {
-        "title": "Bienvenid@s a mi Web Portfolio"
+        "title": "Hola a todos este es mi Portfolio"
     },
     "landing": {
-        "title": "Bienvenido a mi Portfolio"
+        "title": "Hola a Todos",
+        "subtitle": "Veamos en que puedo ayudarte"
     },
     "loader" : {
         "text": "cargando..."
@@ -22,6 +23,18 @@
         "password_placeholder": "contraseña",
         "button_login": "Entrar",
         "login_title": "Panel de Acceso"
+    },
+    "project_input": {
+        "err_input": "Proyecto inválido",
+        "success_input": "Proyecto agregado exitosamente",
+        "title_placeholder": "Título",
+        "description_placeholder": "Descripción",
+        "link_placeholder": "Enlace",
+        "tags_placeholder": "Etiquetas",
+        "version_placeholder": "Versión",
+        "button_add": "Agregar",
+        "button_delete": "Eliminar",
+        "page_title": "Agregar Proyecto"
     },
     "admin": {
         "err_invalid_form": "Elementos no pueden estar vacíos",

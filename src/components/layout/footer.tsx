@@ -20,10 +20,10 @@ const Wrapper = styled.div`
   left: 0px;
   right: 0px;
   padding-top: 250px;
-  background-color: ${themes.light.primary};
+  background-color: ${themes.custom.primary};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${themes.dark.primary};
+    background-color: ${themes.custom.primary};
   }
 
   @media (max-width: 550px) {

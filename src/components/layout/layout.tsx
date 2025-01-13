@@ -21,12 +21,12 @@ const Layout = (props: LayoutProps) => {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta
           name="theme-color"
-          content={themes.light.primary}
+          content={themes.custom.primary}
           media="(prefers-color-scheme: light)"
         />
         <meta
           name="theme-color"
-          content={themes.dark.primary}
+          content={themes.custom.primary}
           media="(prefers-color-scheme: dark)"
         />
       </Helmet>
