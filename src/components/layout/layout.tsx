@@ -3,6 +3,7 @@ import { GlobalStyle } from '../../styles/GlobalStyle';
 // import Footer from "./footer";
 import { themes } from '../../styles/ColorStyles';
 import Header from './header';
+//import Footer from './footer';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 

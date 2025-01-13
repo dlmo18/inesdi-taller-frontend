@@ -7,20 +7,18 @@ import { Link } from 'react-router-dom';
 interface AboutMeCardRowProps {
   title: string;
   value: string | number;
-  isLink: boolean;
+  isLink?: boolean | null;
 }
 
 const AboutMeCardRow = (props: AboutMeCardRowProps) => {
-  const formatValue = (value: string | number): string => {
-    if (props.isLink) {
-      return <Link 
-        to={value} 
-        target="_blank"
-        key="link-input">
+  const formatValue = (value: any): any => {
+    if (props?.isLink) {
+      return (
+        <Link to={{ pathname: value }} target="_blank" key="link-input">
           {value}
-      </Link>;
-    }
-    else if (typeof value === 'number') {
+        </Link>
+      );
+    } else if (typeof value === 'number') {
       const date = new Date(value);
       return date.toLocaleDateString();
     } else {

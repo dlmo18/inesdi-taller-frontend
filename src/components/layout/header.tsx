@@ -20,8 +20,13 @@ export const menuData = [
   }
 ];
 
+
 const Header = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  function changeLang (lang:any, e:any) {
+    i18n.changeLanguage(lang);
+  };
 
   return (
     <Wrapper>
@@ -36,6 +41,10 @@ const Header = () => {
           </Link>
         ))}
       </MenuWrapper>
+      {/* <LangMenu>
+        <button onClick={(e) => changeLang('es-ES', e)}>ES</button>
+        <button onClick={(e) => changeLang('en-EN', e)}>EN</button>
+      </LangMenu> */}
     </Wrapper>
   );
 };
@@ -63,6 +72,24 @@ const Wrapper = styled.div`
 interface MenuWrapperProps {
   count: number;
 }
+
+const LangMenu = styled.div`
+  left: 2rem;
+  top: 3rem;
+  position: absolute;
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:first-child {
+    border-right: 1px solid #fff;
+    padding-left: 0;
+  }
+`;
 
 const LinkButton = styled.p`
   color: ${themes.custom.text1};
