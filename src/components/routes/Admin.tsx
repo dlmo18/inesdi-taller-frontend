@@ -57,11 +57,18 @@ const Title = styled(H1)`
 const ButtonLink = styled.div`
   font-size: 1.2rem;
   border-radius: 1rem;
-  color: ${themes.custom};
+  color: ${themes.custom.text1};
   text-align: center;
   max-width: 300px;
   margin: 80px auto 0;
   padding: 1rem 1.5rem;
+
+  a {
+    color: ${themes.custom.text1};
+    background: ${themes.custom.primary};
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+  }
 `;
 
 export default Admin;

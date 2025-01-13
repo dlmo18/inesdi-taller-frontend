@@ -133,7 +133,7 @@ export const mockProjects = () =>
             "description" : data?.description,
             "version"     : data?.version,
             "link"        : data?.link,
-            "tags"         : data?.tags,
+            "tag"         : data?.tags,
             "timestamp"   : now
             } 
           ]

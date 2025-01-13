@@ -39,6 +39,8 @@ export const themes = {
     secondary: '#2EAE7B',
     backgroundColor: `#2B2830`,
     backgroundForm: `#282828`,
+    warning: `#C22D2D`,
+    loadingScreen: 'rgba(0,0,0,0.7)',
     card: {
       backgroundColor: `rgba(0, 0, 0, 0.4)`,
       boxShadow: `0px 30px 60px rgba(0, 0, 0, 0.25),
@@ -68,9 +70,11 @@ export const themes = {
     primary: `#44749d`,
     secondary: '#bdb8ad',
     backgroundColor: `#c6d4e1`,
-    backgroundForm: `#ebe7e0`,
+    backgroundForm: `#93a2ae`,
+    warning: `#C22D2D`,
+    loadingScreen: 'rgba(0,0,0,0.7)',
     card: {
-      backgroundColor: `#44749d`,
+      backgroundColor: `#28455E`,
       boxShadow: `0px 30px 60px rgba(0, 0, 0, 0.25),
         inset 0 0 0 0.5px rgba(255, 255, 255, 0.2)`,
       backgroundColorFull: `rgba(0, 0, 0, 1)`

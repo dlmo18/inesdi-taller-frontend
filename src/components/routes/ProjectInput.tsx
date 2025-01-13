@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { mockProjectInput } from '../../utils/mock-response';
 import { themes } from '../../styles/ColorStyles';
-import { Caption, H1 } from '../../styles/TextStyles';
+import { Caption, H1, MediumText } from '../../styles/TextStyles';
 import Loader from '../elements/Loader';
 import useFetchData from '../../hooks/useFetchData';
+import { Project } from '../../model/project';
 
 const ProjectInput = () => {
   const navigate = useNavigate();
@@ -18,7 +19,14 @@ const ProjectInput = () => {
   const [tags, setTags] = useState('');
   const [version, setVersions] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const [successMsg, setSuccessMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState<Project>({
+    title: '',
+    description: '',
+    tag: '',
+    link: '',
+    version: '',
+    timestamp: 0
+  });
 
   if (error) {
     return (
@@ -39,16 +47,15 @@ const ProjectInput = () => {
     }
 
     try {
-      
       const result = await mockProjectInput({
-        "title": title,
-        "description": description,
-        "tags": tags,
-        "link": link,
-        "version": version
+        title: title,
+        description: description,
+        tags: tags,
+        link: link,
+        version: version
       });
 
-      setSuccessMsg(result);
+      setSuccessMsg(result[0]);
 
 
     } catch (e) {
@@ -57,15 +64,20 @@ const ProjectInput = () => {
   }
 
   function successMessage() {
+
+    if(!successMsg._id) {
+      return '';
+    }
+
     return  <WrapperSuccess>
         <strong>{t('project_input.success_input')}:</strong>
         <ul>
-          <li>ID: {successMsg[0]._id}</li>
-          <li>{t('project_input.title_placeholder')}:{successMsg[0].title}</li>
-          <li>{t('project_input.description_placeholder')}:{successMsg[0].description}</li>
-          <li>{t('project_input.link_placeholder')}:{successMsg[0].link}</li>
-          <li>{t('project_input.tags_placeholder')}:{successMsg[0].tags}</li>
-          <li>{t('project_input.version_placeholder')}:{successMsg[0].version}</li>
+          <li>ID: {successMsg._id}</li>
+          <li>{t('project_input.title_placeholder')}:{successMsg.title}</li>
+          <li>{t('project_input.description_placeholder')}:{successMsg.description}</li>
+          <li>{t('project_input.link_placeholder')}:{successMsg.link}</li>
+          <li>{t('project_input.tags_placeholder')}:{successMsg.tag}</li>
+          <li>{t('project_input.version_placeholder')}:{successMsg.version}</li>
         </ul>
       </WrapperSuccess>;
   }
@@ -160,7 +172,7 @@ const ProjectInput = () => {
 
 const WrapperSuccess = styled.div`
   ${themes.custom.modal}
-  color: green;
+  color: ${themes.custom.text1};
   padding: 1rem;
 `;
 
@@ -267,6 +279,13 @@ const SubmitForm = styled.input`
 
   @media (prefers-color-scheme: dark) {
     background-color: ${themes.custom.primary};
+  }
+`;
+
+const ErrorMsg = styled(MediumText)`
+  text-align: center;
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.custom.text1};
   }
 `;
 

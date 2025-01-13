@@ -5,7 +5,10 @@ import { themes } from '../../styles/ColorStyles';
 const Footer = () => {
   return (
     <Wrapper>
-      <ContentWrapper></ContentWrapper>
+      <ContentWrapper>
+        <button>ES</button>
+        <button>EN</button>
+      </ContentWrapper>
     </Wrapper>
   );
 };
