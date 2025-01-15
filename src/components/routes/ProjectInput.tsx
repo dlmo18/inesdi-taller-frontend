@@ -64,7 +64,6 @@ const ProjectInput = () => {
   }
 
   function successMessage() {
-
     if(!successMsg._id) {
       return '';
     }
